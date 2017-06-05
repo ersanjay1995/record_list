@@ -1,14 +1,23 @@
+import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { FormsModule }   from '@angular/forms';
+import { FilterSearchPipe } from './filter-search.pipe';
+import { HttpModule }    from '@angular/http';
+
+import { RecordDetailComponent } from './record-detail.component';
 
 import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RecordDetailComponent,
+    FilterSearchPipe
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
