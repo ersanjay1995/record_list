@@ -1,6 +1,11 @@
 <div *ngIf="record">
   <h2>{{record.title}} ({{record.year}})</h2>
-  <div><label>Artist: </label>{{record.artist}}</div>
-  <div><label>Notes: </label><img src="{{record.notes}}" /></div>
+  <div *ngIf="record.artist"><strong>Artist:</strong> {{record.artist}}</div>
+  <div *ngIf="record.genre"><strong>Genre:</strong> {{record.genre}}</div>
+  <div *ngIf="record.label"><strong>Label:</strong> {{record.label}}</div>
+  <div *ngIf="record.number"><strong>Number:</strong> {{record.number}}</div>
+  <div *ngIf="record.cost"><strong>Cost:</strong> {{record.cost}}</div>
+  <div *ngIf="record.image"><img src="{{record.image}}" width="250" /></div>
+  <div *ngIf="record.notes"><label>Notes: </label>{{record.notes}}</div>
 </div>
 

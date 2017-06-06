@@ -12,7 +12,8 @@
       <li *ngFor="let record of records | FilterSearchPipe: queryString"
         [class.selected]="record === selectedRecord"
         (click)="onSelect(record)">
-        <span class="badge">{{record.id}}</span>{{record.artist}}, {{record.title}} ({{record.year}})
+        <span class="badge">{{record.id}}</span>{{record.artist}}, {{record.title}}
+        <span *ngIf="record.year">({{record.year}})</span>
       </li>
     </ul>
   </div>

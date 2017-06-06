@@ -25,10 +25,16 @@ export class RecordService {
         for (var i in entries) {
           output.push({
               id: i,
-              title: entries[i].gsx$title.$t,
               artist: entries[i].gsx$artist.$t,
+              title: entries[i].gsx$title.$t,
               year: entries[i].gsx$year.$t,
               notes: entries[i].gsx$notes.$t,
+              label: entries[i].gsx$label.$t,
+              number: entries[i].gsx$number.$t,
+              cost: entries[i].gsx$cost.$t,
+              genre: entries[i].gsx$genre.$t,
+              collection: entries[i].gsx$collection.$t,
+              image: entries[i].gsx$image.$t,
           });
         }
         return output;
