@@ -1,5 +1,5 @@
 <div *ngIf="record">
-  <h2>{{record.title}} ({{record.year}})</h2>
+  <h2>{{record.title}}<div *ngIf="record.year"> ({{record.year}})</div></h2>
   <div *ngIf="record.artist"><strong>Artist:</strong> {{record.artist}}</div>
   <div *ngIf="record.genre"><strong>Genre:</strong> {{record.genre}}</div>
   <div *ngIf="record.label"><strong>Label:</strong> {{record.label}}</div>
